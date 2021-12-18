@@ -9,6 +9,15 @@ public class GameControl : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
+    public void Level2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void MainScene()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
 
 }
 
