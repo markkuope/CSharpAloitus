@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -39,9 +40,6 @@ public class Player : MonoBehaviour
         }
 
 
-
-
-
         // Change the color of the gameobject
         if (Input.GetKeyDown(KeyCode.G))
         {
@@ -62,6 +60,7 @@ public class Player : MonoBehaviour
 
     }// update-funktio p‰‰ttyy t‰h‰n
 
+    //ker‰ill‰‰n karkkeja
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Collectible")
@@ -69,8 +68,19 @@ public class Player : MonoBehaviour
             // Let¥s collect things
             Destroy(collision.gameObject);
         }
+        // Let¥s get destroyed by enemy
+        if (collision.gameObject.tag == "Enemy")
+        {
+            //Destroy(gameObject);
+
+            // Let¥s load the GameOver -scene
+
+            SceneManager.LoadScene("GameOver");
+
+        }
     }
 
 } // Player p‰‰ttyy t‰h‰n
+
 
 
