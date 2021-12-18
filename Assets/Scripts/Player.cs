@@ -71,8 +71,19 @@ public class Player : MonoBehaviour
             // Let¥s collect things
             Destroy(collision.gameObject);
         }
+        // Let¥s get destroyed by enemy
+        if (collision.gameObject.tag == "Enemy")
+        {
+            //Destroy(gameObject);
+
+            // Let¥s load the GameOver -scene
+
+            SceneManager.LoadScene("GameOver");
+
+        }
     }
-}
+
+} // Player p‰‰ttyy t‰h‰n
 
 
 
