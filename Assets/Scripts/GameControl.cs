@@ -8,6 +8,8 @@ public class GameControl : MonoBehaviour
 {
     public static GameControl instance;
 
+    public GameObject livesHolder;
+
     int score = 0;
     int lives = 3;
 
@@ -41,7 +43,10 @@ public class GameControl : MonoBehaviour
         if (lives > 0)
         {
             lives--;
-            print(lives);
+           // print(lives);
+
+            livesHolder.transform.GetChild(lives).gameObject.SetActive(false);
+
         }
         if (lives <= 0)
         {
@@ -52,7 +57,8 @@ public class GameControl : MonoBehaviour
 
     public void GameOver()
     {
-        print("GameOver()");
+        //print("GameOver()");
+        SceneManager.LoadScene("GameOver");
     }
 
 }
