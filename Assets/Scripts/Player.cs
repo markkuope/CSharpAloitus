@@ -78,8 +78,12 @@ public class Player : MonoBehaviour
 
             // Let´s load the GameOver -scene
 
-            SceneManager.LoadScene("GameOver");
+            //SceneManager.LoadScene("GameOver");
 
+            // Decrease Lives
+            GameControl.instance.DecreaseLife();
+            // Destroy the enemy
+            Destroy(collision.gameObject);
         }
     }
 

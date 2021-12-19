@@ -9,6 +9,7 @@ public class GameControl : MonoBehaviour
     public static GameControl instance;
 
     int score = 0;
+    int lives = 3;
 
     public Text scoreText;
     private void Awake()
@@ -34,5 +35,25 @@ public class GameControl : MonoBehaviour
         scoreText.text = score.ToString(); // muutetaan samalla score int -arvosta string -arvoksi
         //print(score);
     }
+
+    public void DecreaseLife()
+    {
+        if (lives > 0)
+        {
+            lives--;
+            print(lives);
+        }
+        if (lives <= 0)
+        {
+            GameOver();
+        }   
+        
+    }
+
+    public void GameOver()
+    {
+        print("GameOver()");
+    }
+
 }
 
