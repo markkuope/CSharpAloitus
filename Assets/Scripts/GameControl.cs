@@ -13,6 +13,11 @@ public class GameControl : MonoBehaviour
     int score = 0;
     int lives = 3;
 
+    int score1 = 4; // karkkien m‰‰r‰ tasolla 1
+    int scoremax = 9; // karkkien m‰‰r‰ tasolla 2 (5) + karkkien m‰‰r‰ tasolla 1 (4)
+
+
+
     public Text scoreText;
     private void Awake()
     {
@@ -33,10 +38,38 @@ public class GameControl : MonoBehaviour
     }
     public void IncrementScore()
     {
-        score++;
-        scoreText.text = score.ToString(); // muutetaan samalla score int -arvosta string -arvoksi
-        //print(score);
+        //haetaan ladatun scenen buildindex ja tallennetaan se muuttujaan y
+        int y = SceneManager.GetActiveScene().buildIndex;
+
+        // Tarkistetaan, ollaanko viel‰ tasolla 1, jos ei , hyp‰t‰‰n t‰m‰n ehtolausekkeen yli
+        if (y < 2)
+        {
+
+            if (score < score1)
+            {
+                score++;
+                scoreText.text = score.ToString(); //score int -arvosta string -arvoksi
+
+                if (score == score1) //kun 1 tason karkit on ker‰tty
+                {
+                    SceneManager.LoadScene("Level2");
+                }
+
+            }
+        }
+
+        if (y > 1) // tarkistetaan, onko buildindex > 1, esim tasolla Level2 (y=2)
+        {
+            score1++;
+            scoreText.text = score1.ToString(); // score1 int -arvosta string -arvoksi
+
+            if (score1 == scoremax)
+            {
+                SceneManager.LoadScene("Win");
+            }
+        }
     }
+
 
     public void DecreaseLife()
     {
