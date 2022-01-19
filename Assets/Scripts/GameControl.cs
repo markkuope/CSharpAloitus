@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameControl : MonoBehaviour
 {
     public static GameControl instance;
 
     int score = 0;
+
+    public Text scoreText;
 
     private void Awake()
     {
@@ -33,7 +36,8 @@ public class GameControl : MonoBehaviour
     {
         //score = score + 1;
         score++;
-        print(score);
+        scoreText.text = score.ToString(); //muutetaan samalla score int - arvosta string -arvoksi
+        //print(score);
     }
 
 
