@@ -127,3 +127,28 @@ System memory in use after: 57.0 MB.
 Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1567.
 Total: 4.512900 ms (FindLiveObjects: 0.333100 ms CreateObjectMapping: 0.103300 ms MarkObjects: 4.041100 ms  DeleteObjects: 0.033600 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 503.185882 seconds.
+  path: Assets/Scenes/Level1
+  artifactKey: Guid(69b1feebf4817c24ab2099f7cf71713a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level1 using Guid(69b1feebf4817c24ab2099f7cf71713a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a376624344b510e78072cd93498a8970') in 0.073963 seconds
+  Import took 0.079182 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000471 seconds.
+  path: Assets/Scenes/Level1/LightingData.asset
+  artifactKey: Guid(1b231071725d466429237db588ba3b41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level1/LightingData.asset using Guid(1b231071725d466429237db588ba3b41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80102daa97ff33fc78d516d8c7cdf832') in 0.073532 seconds
+  Import took 0.079655 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000515 seconds.
+  path: Assets/Scenes/Level1/ReflectionProbe-0.exr
+  artifactKey: Guid(58a3bf82f985dd44b8e41147fe4e41dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level1/ReflectionProbe-0.exr using Guid(58a3bf82f985dd44b8e41147fe4e41dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd379a950c822422263c2567cc6ec8d8') in 0.311249 seconds
+  Import took 0.316803 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
