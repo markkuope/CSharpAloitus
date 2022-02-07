@@ -6,11 +6,15 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     Rigidbody rb;
+    BoxCollider col;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        //col = GetComponent<BoxCollider>();
+        //col.size = new Vector3(2, 2, 2);
+        //  m_Collider.size = new Vector3(m_ScaleX, m_ScaleY, m_ScaleZ);
     }
 
     // Update is called once per frame
